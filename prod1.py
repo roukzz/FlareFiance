@@ -33,10 +33,10 @@ while True:
     driver.refresh()
     path='//*[@id="root"]/div[3]/div[1]/div[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[1]'
 
-    for x in range(1,31):
+    for x in range(7,31):
         i = str(x)
         xpath = '//*[@id="root"]/div[3]/div/div/div/div[2]/div/div[1]/div/div/div[2]/div['+i+']/div[4]/button'
-        print(xpath)
+        # print(xpath)
         try : 
             element_present = EC.presence_of_element_located((By.XPATH, xpath))
             WebDriverWait(driver, 40).until(element_present)
