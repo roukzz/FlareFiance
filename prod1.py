@@ -39,8 +39,8 @@ while True:
         print(xpath)
         try : 
             element_present = EC.presence_of_element_located((By.XPATH, xpath))
-            WebDriverWait(driver, 30).until(element_present)
-            driver.find_element_by_xpath('//*[@id="root"]/div[3]/div/div/div[3]/div[2]/div[2]/div[2]/div['+ i+ ']/div[4]/button').click()
+            WebDriverWait(driver, 40).until(element_present)
+            driver.find_element_by_xpath(xpath).click()
             print("button : ", x, " clicked ", " TIME: ",datetime.now())
             if (x%6) == 0:
                 try:
